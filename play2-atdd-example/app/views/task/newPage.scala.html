@@ -1,0 +1,12 @@
+@(taskInputForm: Form[controllers.TaskInput])(implicit request: RequestHeader, messages: Messages)
+
+@import helper._
+
+@main("タスク登録ページ"){
+    @helper.form(action = routes.TaskController.create) {
+        @CSRF.formField
+        @helper.inputText(taskInputForm("user"))
+        @helper.inputText(taskInputForm("todo"))
+        <input type="submit" name="submit" value="登録">
+    }
+}
