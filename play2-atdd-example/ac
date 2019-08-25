@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+opt=$1
+case "$opt" in
+    "dev" ) sbt 'testOnly features.* -- -n developing' ;;
+    "-" ) sbt "~testOnly features.* -- -n developing" ;;
+    "" ) sbt 'testOnly features.*' ;;
+    * ) sbt "testOnly features.*${opt}*" ;;
+esac

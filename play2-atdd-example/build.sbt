@@ -8,7 +8,10 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala)
 scalaVersion := "2.12.8"
 
 libraryDependencies += guice
-libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "4.0.3" % Test
+libraryDependencies ++= Seq(
+  "org.scalatestplus.play" %% "scalatestplus-play" % "4.0.3" % Test,
+  "org.pegdown" % "pegdown" % "1.4.2" % Test,
+)
 
 libraryDependencies ++= Seq(
   "com.typesafe.play" %% "play-slick" % "3.0.0",

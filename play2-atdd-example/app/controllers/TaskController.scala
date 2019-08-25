@@ -33,7 +33,7 @@ class TaskController @Inject()(
       }
       ,
       taskInput => {
-        service.create(TaskInput)
+//        service.create(taskInput)
         Redirect(routes.TaskController.list())
       }
     )

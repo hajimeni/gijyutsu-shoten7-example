@@ -15,3 +15,4 @@ abstract class FeatureSpecBase extends FeatureSpec
 }
 
 object featureTag extends Tag("feature")
+object developingTag extends Tag("developing")
